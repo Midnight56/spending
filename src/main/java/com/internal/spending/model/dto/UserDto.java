@@ -5,7 +5,7 @@
 
 package com.internal.spending.model.dto;
 
-import com.internal.spending.model.entities.User;
+import com.internal.spending.model.entities.UserEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -20,12 +20,4 @@ public class UserDto {
     private String password;
     private String login;
     private Timestamp lastActivity;
-
-    public UserDto(User user) {
-        this.id = user.getId();
-        this.firstname = user.getFirstname();
-        this.lastname = user.getLastname();
-        this.login = user.getLogin();
-        this.lastActivity = user.getLastActivity();
-    }
 }

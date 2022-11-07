@@ -7,10 +7,12 @@ package com.internal.spending.service;
 
 import com.internal.spending.model.dto.UserDto;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 public interface UserService {
 
     Flux<UserDto> findAll();
 
-    UserDto save(UserDto userDto);
+    Mono<UserDto> create(UserDto userDto);
+
 }
